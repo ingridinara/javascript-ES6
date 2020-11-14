@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        es plantegen petits fragments de codi JavaScript ES5, 
+        els quals s'han de reescriure per a utilitzar la 
+        nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.
+    -->
+    <!--
+Exercici 6
+Reemplaça en el següent bloc 
+de codi la promesa per aync/await:
+
+function b() {
+   // ...
+}
+funtion a() {
+   b().then() = > {
+   doMoreWork();
+   }
+}
+-->
+    <script>
+      function b() {
+         // ...
+      }
+
+
+      // Abajo esta la funcion asincrona ...
+      async function a() {
+          let result = await b();  = > {
+              // ... que espera que se procese
+              // la funcion b para poder continuar
+         doMoreWork();
+         }
+      }
+    </script>
+
+    <!--  Material Estudio:
+  scrimba Introduction to ES6
+   + 
+  https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/funcion_asincrona -->
+  </body>
+</html>
