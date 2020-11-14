@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        es plantegen petits fragments de codi JavaScript ES5, 
+        els quals s'han de reescriure per a utilitzar la 
+        nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.
+    -->
+    <!--
+Exercici 2
+Converteix a funcions fletxa:
+-->
+    <script>
+      /* 1-
+function multiply(num1, num2) {
+   return num1 * num2;
+}   
+*/
+      let multiply = (num1, num2) => num1 * num2;
+
+      /* 2- 
+function toCelsius(fahrenheit) {
+   return (5/9) * (fahrenheit-32);
+} 
+*/
+      let toCelsius = (fahrenheit) => (5 / 9) * (fahrenheit - 32);
+
+      /* 3- 
+// This function returns a string padded with leading zeros
+function padZeros(num, totalLen) {
+   var numStr = num.toString();
+   var numZeros = totalLen - numStr.length;
+   for (var i = 1; i <= numZeros; i++) {
+      numStr="0" + numStr; 
+      } 
+   return numStr;
+ }  
+*/
+      // This function returns a string padded with leading zeros
+      let padZeros = (num, totalLen) => {
+        var numStr = num.toString();
+        var numZeros = totalLen - numStr.length;
+        for (var i = 1; i <= numZeros; i++) {
+          numStr = "0" + numStr;
+        }
+        return numStr;
+      };
+
+      /* 4-
+function power(base, exponent) { 
+   var result=1; 
+   for (var i=0; i < exponent; i++) { 
+         result *=base; 
+   } 
+   return result;
+}  
+*/
+      let power = (base, exponent) => {
+        var result = 1;
+        for (var i = 0; i < exponent; i++) {
+          result *= base;
+        }
+        return result;
+      };
+
+      /* 5 - 
+function greet(who) {
+    console.log("Hello " + who);
+} 
+*/
+      let greet = (who) => {
+        console.log("Hello " + who);
+      };
+    </script>
+
+    <!--     General Rules: 
+ 1st - you delete the word "function"
+ 2nd - you add the arrow =>
+ 3rd - if the furnction has a "return", you can errase this word...
+ 4th- ...and you can delet the curly braces { } 
+ 5th- if you have only 1 parameter you can delet the ()
+ but, you CANNOT delet the () if you have more than 1 parameter ! -->
+
+    <!--     
+   Material Estudio: 
+   scrimba Introduction to ES6
+   + 
+   https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions
+ -->
+  </body>
+</html>
