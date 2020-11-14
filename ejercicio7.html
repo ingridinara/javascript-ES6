@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        es plantegen petits fragments de codi JavaScript ES5, 
+        els quals s'han de reescriure per a utilitzar la 
+        nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.
+    -->
+    <!--
+Exercici 7
+Tenim un array de tasques i volem aconseguir un array 
+que contingui únicament els noms de les tasques. 
+
+- Usar .forEach() per obtenir aquest array.
+- Usar .map() per obtenir aquest array.
+
+var tasks = [
+{
+   'name' : 'Start React web',
+   'duration' : 120
+},
+{
+   'name' : 'Work out',
+   'duration' : 60
+},
+{
+   'name' : 'Procrastinate on facebook',
+   'duration' : 240
+}
+];
+
+-->
+    <script>
+      var tasks = [
+        {
+          name: "Start React web",
+          duration: 120,
+        },
+        {
+          name: "Work out",
+          duration: 60,
+        },
+        {
+          name: "Procrastinate on facebook",
+          duration: 240,
+        },
+      ];
+
+      // .forEach
+      //.forEach(function(element, index, arreglo))
+      const newArrayForEach = tasks.forEach((element) => console.log(element));
+      console.log(newArrayForEach);
+      // document.write(newArrayForEach);
+
+      // .map()
+      //array.map(function(currentValue, index, arr), thisValue)
+      const newArrayMap = tasks.map((u) => [u.name]);
+      console.log(newArrayMap);
+      document.write(newArrayMap);
+    </script>
+    <!--   Material Estudio:
+    Curso de JavaScript -Metodo For each - ProCode Tv
+    https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach
+    https://stackoverflow.com/questions/54476235/map-nested-array-with-javascript
+ -->
+  </body>
+</html>
