@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        es plantegen petits fragments de codi JavaScript ES5, 
+        els quals s'han de reescriure per a utilitzar la 
+        nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.
+    -->
+    <!--
+Exercici 3
+Arregla l'error del següent bloc de codi:
+
+users.map(function (user) {
+   user.firstName;
+});
+
+var users = 
+[{ firstName: 'Homer', lastName: 'Simpson' },
+{ firstName: 'Marge', lastName: 'Simpson' },
+{ firstName: 'Bart', lastName: 'Simpson' },
+{ firstName: 'Lisa', lastName: 'Simpson' },
+{ firstName: 'Maggie', lastName: 'Simpson' }];
+
+-->
+    <script>
+      // map - coge el array, itera, aplica la funcion
+      // y retorna para el nuevo array
+      //const newArrayMap = users.map (user => {user.firstName;} );
+
+      var users = [
+        { firstName: "Homer", lastName: "Simpson" },
+        { firstName: "Marge", lastName: "Simpson" },
+        { firstName: "Bart", lastName: "Simpson" },
+        { firstName: "Lisa", lastName: "Simpson" },
+        { firstName: "Maggie", lastName: "Simpson" },
+      ];
+
+      //array.map(function(currentValue, index, arr), thisValue)
+      var newArrayMap = users.map((user) =>
+        // para array se utiliza [ ]
+        [user.firstName]
+      );
+
+      console.log(newArrayMap);
+      document.write(newArrayMap);
+    </script>
+
+    <!-- Material Estudio:
+https://www.w3schools.com/jsref/jsref_map.asp -->
+  </body>
+</html>
