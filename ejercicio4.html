@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        es plantegen petits fragments de codi JavaScript ES5, 
+        els quals s'han de reescriure per a utilitzar la 
+        nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.
+    -->
+    <!--
+Exercici 4
+Donat el següent array de strings, mostrar per consola la frase completa usant .reduce()
+var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+
+Resultat per consola: 'a long time ago in a galaxy far far away'
+
+Nota: no fa falta fer un "join".
+
+-->
+    <script>
+      var epic = [
+        "a",
+        "long",
+        "time",
+        "ago",
+        "in a",
+        "galaxy",
+        "far far",
+        "away",
+      ];
+
+      /*
+(REDUCE - ES5)
+ epic.reduce(function(emptyArrayStringOrObject, iterableArray){  
+ return emptyArrayStringOrObject + iterableArray; }, ' ')  
+ */
+
+      /*Abajo ES6 */
+      /* epicReduce --> variable para almacenar el valor*/
+      var epicReduce = epic.reduce(
+        (valorAcumulador, epic) => valorAcumulador + " " + epic,
+        " "
+      );
+      // the 1st '' give the spaces to separate elements from 'Epic'
+      // the 2nd '' is because we want to return a string from a reduce function
+      // e.g. if we wanted to return an object we would put { } inseted
+
+      console.log(epicReduce);
+    </script>
+    <!-- 
+    Reduce itera un array, pero puede retornar un array, un objeto, una string.
+    Al contrario de map y filter que solo retornan arrays.  -->
+
+    <!-- Material Estudio - YouTube:
+Curso de JavaScript #11 - map, filter e reduce (2020)
+Programador a Bordo -->
+  </body>
+</html>
