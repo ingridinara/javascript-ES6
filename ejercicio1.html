@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        es plantegen petits fragments de codi JavaScript ES5, 
+        els quals s'han de reescriure per a utilitzar la 
+        nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.
+    -->
+    <!--
+    Exercici 1
+Mostra els literals en format ES6
+
+var li =
+ '<li>' +
+'<div class="row">' +
+'<div class="col-md-4">' +
+'<img src="' + moviePoster + '" height="250" alt="" />' +
+'</div>' +
+'<div class="col-md-8">' +
+'<h2>' + movieTitle + '</h2>' +
+'</div>' +
+'</div>' +
+'</li>';
+-->
+
+    <script>
+      //ES5
+      var li1 =
+        "<li>" +
+        '<div class="row" style="background-color: blue;">' +
+        '<div class="col-md-4" style="background-color: red;">' +
+        '<img src="' +
+        moviePoster +
+        '" height="250" alt="" />' +
+        "</div>" +
+        '<div class="col-md-8"style="background-color: yellow;">' +
+        "<h2>" +
+        movieTitle +
+        "</h2>" +
+        "</div>" +
+        "</div>" +
+        "</li>";
+      document.write(li1);
+
+      // ES6
+      //Template Literals - back ticks + ${} for variables
+      var moviePoster;
+      var movieTitle = "Movie Title";
+      var li = `<li> 
+        <div class="row" style="background-color: blue;" > 
+        <div class="col-md-4" style="background-color: red;"> 
+        <img src= ' ${moviePoster} '  height="250" alt="" /> 
+        </div>
+        <div class="col-md-8"style="background-color: yellow;">  
+        <h2> ${movieTitle} </h2> 
+        </div>  
+        </div>  
+        </li> `;
+      document.write(li);
+    </script>
+  </body>
+</html>
