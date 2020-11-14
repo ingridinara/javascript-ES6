@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        es plantegen petits fragments de codi JavaScript ES5, 
+        els quals s'han de reescriure per a utilitzar la 
+        nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.
+    -->
+    <!--
+Exercici 5
+Crear una funció que accepti un string i retornada 
+aquest string revertit. 
+Nota: Usar funció fletxa (arrow functions), 
+l'operador de prograpación (spread operator) y el mètode .reverse()
+-->
+
+    <script>
+      var str = prompt("Write Something");
+
+      /* // 1- Abajo ES5: 
+function reversedString (str){
+        return str.split('').reverse().join('');
+}
+console.log(reversedString(str)); */
+
+      /* // 2- Abajo ES6 - wthout Spread Operator: 
+
+const reversedString = (str) => str.split('').reverse().join('');
+
+console.log(reversedString(str)); */
+
+      /* 
+ // 3- Abajo Spread Operator:
+ function reversedString(str){
+  return [...str].reverse().join('');
+}
+
+console.log(reversedString(str));  */
+
+      // 4 - Abajo ES6 + Spread Operator:
+      const reversedString = (str) => [...str].reverse().join("");
+      console.log(reversedString(str));
+      // Nota: El .split no funciona con el spread operator
+    </script>
+    <!-- 
+Material Estudio:
+scrimba Introduction to ES6
+Free Code Camp
+https://medium.com/better-programming/5-ways-to-reverse-a-string-in-javascript-466f62845827 -->
+  </body>
+</html>
